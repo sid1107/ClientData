@@ -29,7 +29,7 @@ namespace ClientData
             {
                 options.UseSqlServer(Configuration.GetConnectionString("ClientDb"));
             });
-            services.AddSingleton<IClientRecord, InMemoryCientData>();
+            services.AddScoped<IClientRecord, SqlClientData>();
             services.AddRazorPages();
         }
 

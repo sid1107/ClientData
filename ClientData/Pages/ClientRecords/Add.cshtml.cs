@@ -38,7 +38,8 @@ namespace ClientData.Pages
 
             TempData["Message"] = "Client Record is Created";
 
-            // clientData.Commit();
+            clientData.Commit();
+            
         }
     }
 }

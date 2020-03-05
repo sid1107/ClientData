@@ -1,0 +1,17 @@
+﻿@page 
+@model ClientData.DetailModel
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h2>@Model.ClientRepo.ClientName</h2>
+<div>
+    Id: @Model.ClientRepo.Clientid
+</div>
+
+<div>
+    Location: @Model.ClientRepo.location
+</div>
+<div>
+    Number Of Emp: @Model.ClientRepo.totemp
+</div>
