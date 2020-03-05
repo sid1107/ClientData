@@ -14,14 +14,15 @@ namespace ClientData.Pages.ClientRecords
     {
         private readonly IClientRecord clientRec;
         public IEnumerable<Repository> ClientRepo { get; set; }
-
+        [BindProperty(SupportsGet =true)]
+        public  string SearchTerm { get; set; }
         public ListModel(IClientRecord ClientRec)
         {
             this.clientRec = ClientRec;
         }
         public void OnGet()
         {
-            ClientRepo = clientRec.getALL();
+            ClientRepo = clientRec.getClientByName(SearchTerm);
         }
     }
 }

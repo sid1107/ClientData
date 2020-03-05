@@ -8,7 +8,7 @@ namespace ClientData.Data
 {
     public interface IClientRecord
     {
-        IEnumerable<Repository> getALL();
+        IEnumerable<Repository> getClientByName(string Name);
     }
 
     public class InMemoryCientData : IClientRecord
@@ -24,9 +24,10 @@ namespace ClientData.Data
                 new Repository { Clientid =4,ClientName="Merc",location="Japan",totemp="9000"}
             };
         }
-        public IEnumerable<Repository> getALL()
+        public IEnumerable<Repository> getClientByName(string Name =null)
         {
                 return from rec in repo
+                  where string.IsNullOrEmpty(Name)|| rec.ClientName.StartsWith(Name)
                    orderby rec.Clientid
                     select rec;
         }

@@ -4,6 +4,20 @@
 }
 <h1>Client Records</h1>
 
+<form method="get">
+    <div class="form-group">
+        <div class="input-group">
+            <input type="search" class="form-control"
+                   asp-for="SearchTerm" />
+           
+                <button class="btn btn-primary"> Find
+                    <i class="glyphicon glyphicon-search"></i>
+                </button>
+            
+        </div>
+    </div>
+</form>
+
 <div class="table-responsive">
     <table class="table table-bordered table-condensed table-striped table-hover sortable">
         <thead>
