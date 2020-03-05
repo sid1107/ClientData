@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientData", "ClientData\Cl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientRepo", "ClientRepo\ClientRepo.csproj", "{4145F6EB-B48D-46DE-95B6-FD49771AFA08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientData.Data", "ClientData.Data\ClientData.Data.csproj", "{BD937A99-132D-46D9-8816-B3E961F6353E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientData.Data", "ClientData.Data\ClientData.Data.csproj", "{BD937A99-132D-46D9-8816-B3E961F6353E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

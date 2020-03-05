@@ -9,6 +9,8 @@ namespace ClientData.Data
     public interface IClientRecord
     {
         IEnumerable<Repository> getClientByName(string Name);
+        Repository Add(Repository newClientData);
+        int Commit();
     }
 
     public class InMemoryCientData : IClientRecord
@@ -24,10 +26,25 @@ namespace ClientData.Data
                 new Repository { Clientid =4,ClientName="Merc",location="Japan",totemp="9000"}
             };
         }
-        public IEnumerable<Repository> getClientByName(string Name =null)
+
+        public Repository Add(Repository newClientData)
         {
+            repo.Add(newClientData);
+            newClientData.Clientid = repo.Max(r => r.Clientid) + 1;
+            return newClientData;
+        }
+
+        public int Commit()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Repository> getClientByName(string Name = null)
+        {
+            
+            
                 return from rec in repo
-                  where string.IsNullOrEmpty(Name)|| rec.ClientName.StartsWith(Name)
+                  where string.IsNullOrEmpty(Name)|| rec.ClientName.ToLower().StartsWith(Name.ToLower())
                    orderby rec.Clientid
                     select rec;
         }

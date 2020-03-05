@@ -1,0 +1,31 @@
+﻿@page
+@model ClientData.Pages.AddModel
+@{
+}
+
+<form method="post">
+
+
+    <div class="form-group">
+        <label asp-for="ClientRepo.ClientName">Client Name</label>
+        <input asp-for="ClientRepo.ClientName" class="form-control" />
+        <span class="text-danger" asp-validation-for="ClientRepo.ClientName"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ClientRepo.location">Location</label>
+        <input asp-for="ClientRepo.location" class="form-control" />
+        <span class="text-danger" asp-validation-for="ClientRepo.location"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ClientRepo.totemp">No. Of Employees</label>
+        <input asp-for="ClientRepo.totemp" class="form-control" />
+        <span class="text-danger" asp-validation-for="ClientRepo.totemp"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+@if (Model.DispMessage != "")
+{
+    <div class="alert alert-info">@Model.DispMessage</div>
+}
