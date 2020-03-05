@@ -3,3 +3,31 @@
 @{
 }
 <h1>Client Records</h1>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-condensed table-striped table-hover sortable">
+        <thead>
+            <tr class="danger">
+                <th data-defaultsign="_19"> Client ID</th>
+                <th data-defaultsign="AZ">Client Name</th>
+                <th data-defaultsign="AZ">Location</th>
+                <th data-defaultsign="month">Total Employee</th>
+                
+            </tr>
+        </thead>
+
+        @foreach (var clientdata in @Model.ClientRepo)
+        {
+            <tr>
+                <td>@clientdata.Clientid</td>
+                <td>@clientdata.ClientName</td>
+                <td>@clientdata.location</td>
+                <td>@clientdata.totemp</td>
+
+            </tr>
+
+
+
+        }
+    </table>
+</div>
