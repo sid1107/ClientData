@@ -8,6 +8,7 @@ namespace ClientData.Data
     {
         IEnumerable<Repository> getClientByName(string Name);
         Repository Add(Repository newClientData);
+        Repository getClientById(int id);
         int Commit();
     }
 }

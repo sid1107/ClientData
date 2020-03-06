@@ -31,6 +31,11 @@ namespace ClientData.Data
             throw new NotImplementedException();
         }
 
+        public Repository getClientById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Repository> getClientByName(string Name = null)
         {
             

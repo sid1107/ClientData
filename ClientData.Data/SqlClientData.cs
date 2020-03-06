@@ -22,6 +22,11 @@ namespace ClientData.Data
             return dbContext.SaveChanges();
         }
 
+        public Repository getClientById(int id)
+        {
+            return dbContext.ClientData.FirstOrDefault(e => e.Clientid == id);
+        }
+
         public IEnumerable<Repository> getClientByName(string Name)
         {
             var query = from r in dbContext.ClientData
