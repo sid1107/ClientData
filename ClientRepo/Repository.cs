@@ -9,7 +9,7 @@ namespace ClientRepo
     {
         [Key]
         public int Clientid { get; set; }
-
+         public string   CleintAddress { get; set;}
         public string ClientName { get; set; }
 
         public string location { get; set; }
